@@ -1,0 +1,24 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  brian-md:
+    build: .
+    container_name: brian-md-bot
+    restart: unless-stopped
+    environment:
+      - SESSION_ID=${SESSION_ID}
+      - PREFIX=${PREFIX}
+      - MONGODB_URI=${MONGODB_URI}
+      - PORT=5000
+    volumes:
+      - ./sessions:/app/sessions
+      - ./data:/app/data
+    ports:
+      - "5000:5000"
+    networks:
+      - brian-network
+
+networks:
+  brian-network:
+    driver: bridge
