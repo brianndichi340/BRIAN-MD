@@ -1,37 +1,32 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = {
     // Bot Information
-    BOT_NAME: "BRIAN-MD",
-    OWNER_NAME: "Brian",
-    OWNER_NUMBER: "254717276195",
-    OWNER_EMAIL: "brianndichi340@gmail.com",
-    GITHUB: "https://github.com/brianndichi340",
+    name: "BRIAN-MD",
+    author: "Brian Ndichi",
+    version: "3.0.0",
+    
+    // Session Configuration
+    session: process.env.SESSION_ID || "BrianSession",
     
     // Bot Settings
-    PREFIX: ".",
-    SESSION_ID: process.env.SESSION_ID || "brian-md-session-01",
-    
-    // Features
-    AUTO_READ_STATUS: true,
-    AUTO_LIKE_STATUS: true,
-    ANTI_DELETE: true,
-    ALWAYS_ONLINE: true,
-    ANTI_BUG: true,
-    PAIR_CODE_ENABLED: true,
-    
-    // API Keys
-    OPENAI_KEY: process.env.OPENAI_KEY || "",
+    prefix: process.env.PREFIX || ".",
+    mods: (process.env.MODS || "").split(",").map(num => num.trim() + "@s.whatsapp.net"),
     
     // Database
-    MONGODB_URI: process.env.MONGODB_URI || "mongodb://localhost:27017/brian-bot",
+    mongodb: process.env.MONGODB_URI || "",
     
-    // Deployment
-    PORT: process.env.PORT || 3000,
-    DEPLOYMENT_URL: process.env.DEPLOYMENT_URL || "",
+    // Features
+    autoReadStatus: process.env.AUTO_READ_STATUS === "true",
+    autoTyping: process.env.AUTO_TYPING === "true",
+    maxUploadSize: parseInt(process.env.MAX_UPLOAD_SIZE) || 100,
+    antiSpam: process.env.ANTI_SPAM === "true",
     
-    // Security
-    ADMIN_TOKEN: process.env.ADMIN_TOKEN || "brian-md-secret-token-2024",
+    // API Keys
+    openai: process.env.OPENAI_API_KEY,
+    deepai: process.env.DEEPAI_API_KEY,
     
-    // Session Settings
-    SESSION_TIMEOUT: 24 * 60 * 60 * 1000, // 24 hours
-    PAIR_CODE_TIMEOUT: 5 * 60 * 1000, // 5 minutes
-};
+    // Paths
+    sessionPath: path.join(__dirname, 'sessions', `${process.env.SESSION_ID || 'session'}.json`)
+};};
