@@ -1,0 +1,57 @@
+{
+  "name": "brian-md-whatsapp-bot",
+  "description": "Advanced WhatsApp Bot with AI features",
+  "author": "Brian <brianndichi340@gmail.com>",
+  "repository": "https://github.com/brianndichi340/BRIAN-MD",
+  "version": "3.1.0",
+  
+  "deploy": {
+    "type": "node",
+    "port": 3000,
+    "build_command": "npm install",
+    "start_command": "npm start",
+    "environment": {
+      "NODE_ENV": "production",
+      "SESSION_ID": "brian-md-production-01",
+      "OWNER_NUMBER": "254717276195",
+      "OPENAI_API_KEY": "YOUR_OPENAI_KEY",
+      "MONGODB_URI": "YOUR_MONGODB_URI",
+      "ADMIN_TOKEN": "YOUR_SECURE_TOKEN"
+    }
+  },
+  
+  "domains": [
+    "brian-md-bot.katabump.app",
+    "api.brian-md.katabump.app"
+  ],
+  
+  "scaling": {
+    "min": 1,
+    "max": 3,
+    "memory": "512MB",
+    "cpu": "0.5"
+  },
+  
+  "health_check": {
+    "path": "/health",
+    "interval": 30,
+    "timeout": 5,
+    "retries": 3
+  },
+  
+  "monitoring": {
+    "enabled": true,
+    "metrics": ["cpu", "memory", "requests"],
+    "alerts": {
+      "cpu": 80,
+      "memory": 85,
+      "response_time": 5000
+    }
+  },
+  
+  "backup": {
+    "enabled": true,
+    "schedule": "0 2 * * *", // Daily at 2 AM
+    "retention": 7
+  }
+}
