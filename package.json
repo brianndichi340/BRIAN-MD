@@ -1,13 +1,16 @@
 {
   "name": "brian-md",
-  "version": "3.0.0",
-  "description": "Advanced WhatsApp Bot by Brian",
+  "version": "3.1.0",
+  "description": "Advanced WhatsApp Bot with Session Management by Brian",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
     "deploy": "npm install && pm2 start index.js --name BRIAN-MD",
-    "test": "jest"
+    "test": "jest",
+    "session:backup": "node scripts/backup-session.js",
+    "session:restore": "node scripts/restore-session.js",
+    "katabump:deploy": "node scripts/katabump-deploy.js"
   },
   "author": "Brian <brianndichi340@gmail.com>",
   "license": "MIT",
@@ -23,7 +26,11 @@
     "openai": "^4.20.0",
     "pdfkit": "^0.14.0",
     "sharp": "^0.33.0",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "^4.11.5",
+    "qrcode": "^1.5.3",
+    "compression": "^1.7.4",
+    "helmet": "^7.0.0",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
