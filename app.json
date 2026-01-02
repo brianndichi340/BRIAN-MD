@@ -1,1 +1,29 @@
-
+{
+  "name": "BRIAN-MD",
+  "description": "Advanced WhatsApp Bot with pairing system",
+  "repository": "https://github.com/brianndichi340/BRIAN-MD",
+  "logo": "https://i.imgur.com/YourLogo.png",
+  "keywords": ["nodejs", "whatsapp", "bot", "multi-device"],
+  "stack": "heroku-22",
+  "env": {
+    "MONGODB_URI": {
+      "description": "Your MongoDB connection string",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "Your phone number with country code",
+      "value": "254717276195",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Name of your bot",
+      "value": "BRIAN-MD",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
