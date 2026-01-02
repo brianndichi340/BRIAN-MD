@@ -1,0 +1,31 @@
+{
+  "name": "brian-md",
+  "version": "3.0.0",
+  "description": "Advanced WhatsApp Bot by Brian",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "npm install && pm2 start index.js --name BRIAN-MD",
+    "test": "jest"
+  },
+  "author": "Brian <brianndichi340@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.4.0",
+    "qrcode-terminal": "^0.12.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.5.0",
+    "node-cron": "^3.0.2",
+    "pm2": "^5.3.0",
+    "express": "^4.18.2",
+    "openai": "^4.20.0",
+    "pdfkit": "^0.14.0",
+    "sharp": "^0.33.0",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
