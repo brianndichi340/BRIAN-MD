@@ -8,7 +8,7 @@ module.exports = {
     
     // Bot Settings
     PREFIX: ".",
-    SESSION_NAME: "brian_session",
+    SESSION_ID: process.env.SESSION_ID || "brian-md-session-01",
     
     // Features
     AUTO_READ_STATUS: true,
@@ -16,8 +16,9 @@ module.exports = {
     ANTI_DELETE: true,
     ALWAYS_ONLINE: true,
     ANTI_BUG: true,
+    PAIR_CODE_ENABLED: true,
     
-    // API Keys (Add to .env)
+    // API Keys
     OPENAI_KEY: process.env.OPENAI_KEY || "",
     
     // Database
@@ -25,5 +26,12 @@ module.exports = {
     
     // Deployment
     PORT: process.env.PORT || 3000,
-    DEPLOYMENT_URL: process.env.DEPLOYMENT_URL || ""
+    DEPLOYMENT_URL: process.env.DEPLOYMENT_URL || "",
+    
+    // Security
+    ADMIN_TOKEN: process.env.ADMIN_TOKEN || "brian-md-secret-token-2024",
+    
+    // Session Settings
+    SESSION_TIMEOUT: 24 * 60 * 60 * 1000, // 24 hours
+    PAIR_CODE_TIMEOUT: 5 * 60 * 1000, // 5 minutes
 };
