@@ -1,25 +1,44 @@
-// README.md - BRIAN-MD WhatsApp Bot Documentation
-// ====================================================
+# 🤖 BRIAN-MD WhatsApp Bot
 
-console.log(`
-# 🤖 BRIAN-MD WhatsApp Bot v3.1
+<div align="center">
 
-Advanced WhatsApp bot with Session Management, AI features, and Katabump deployment support.
+![BRIAN-MD Logo](https://img.shields.io/badge/BRIAN-MD-3.0.0-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![WhatsApp](https://img.shields.io/badge/WhatsApp-MultiDevice-brightgreen)
+
+A feature-rich, multi-device WhatsApp bot built with Node.js and Baileys
+
+[Features](#-features) • [Installation](#-installation) • [Deployment](#-deployment) • [Commands](#-commands) • [Pairing](#-pairing)
+
+</div>
 
 ## ✨ Features
 
-### 🔐 Session Management
-- **Session ID Support**: Multiple bot instances with unique IDs
-- **Pair Code System**: 6-digit codes for remote authentication
-- **Remote Session Storage**: MongoDB-backed session persistence
-- **Auto Session Backup**: Regular backups to prevent data loss
+- ✅ **Multi-Device Support** - Works without keeping phone online
+- ✅ **8-Digit Pairing** - Secure linking with 8-digit codes
+- ✅ **400+ Commands** - Extensive command library
+- ✅ **AI Integration** - ChatGPT, DALL-E, Gemini AI
+- ✅ **Media Tools** - Downloaders, editors, converters
+- ✅ **Games** - Interactive games within WhatsApp
+- ✅ **Group Management** - Advanced admin tools
+- ✅ **Database** - MongoDB support with caching
+- ✅ **Security** - Anti-spam, rate limiting, encryption
 
-### 🤖 Core Features
-- ✅ Anti-delete message protection
-- ✅ Auto status viewer & liker
-- ✅ Always online 24/7
-- ✅ 50+ commands across categories
-- ✅ ChatGPT AI integration
+## 🚀 Quick Installation
+
+### Prerequisites
+- Node.js 18 or higher
+- npm or yarn
+- WhatsApp account
+- MongoDB (optional)
+
+### Step-by-Step Setup
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/brianndichi340/BRIAN-MD.git
+cd BRIAN-MD- ✅ ChatGPT AI integration
 - ✅ Media downloaders (YouTube, Instagram)
 - ✅ Group management tools
 
